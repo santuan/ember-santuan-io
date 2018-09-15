@@ -1,0 +1,20 @@
+<div class="ui cards">
+  	{{#each model as |collections|}}
+  		<div class="card">
+		<div class="image">
+		<img src="{{collections.img}}">
+		</div>
+		<div class="content">
+			<div class="header">{{collections.title}}</div>
+			<div class="description">
+				{{collections.excerpt}}
+			</div>
+		</div>
+		<div class="extra content">
+			<a href="{{collections.link}}" target="_blank" class="ui basic green button">Visitar sitio</a>
+		</div>
+	</div>
+    {{/each}}
+</div>
+
+{{liquid-outlet}}

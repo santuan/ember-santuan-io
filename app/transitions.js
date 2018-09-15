@@ -1,22 +1,23 @@
 export default function(){
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('colecciones-libres'),
+    this.toRoute('works'),
     this.use('fade'),
     this.reverse('fade')
   );
 
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('proyectos'),
+    this.toRoute('collections'),
     this.use('fade'),
     this.reverse('fade')
   );
 
   this.transition(
-    this.fromRoute('proyectos'),
-    this.toRoute('colecciones-libres'),
+    this.fromRoute('collections'),
+    this.toRoute('works'),
     this.use('fade'),
     this.reverse('fade')
   );
+
 }

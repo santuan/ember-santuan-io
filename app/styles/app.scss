@@ -1,3 +1,16 @@
+@import "bourbon";
+@import "neat";
+
+.pace .pace-progress {
+  position: fixed;
+  z-index: 8000;
+  bottom: 0px;
+  top: initial;
+  right: 100%;
+  width: 100%;
+  height: 4px;
+}
+
 body  {
 	background: #333;
 	color: #fff;
@@ -5,4 +18,56 @@ body  {
 	a {
 		color: #fff;
 	}
+}
+
+header {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
+
+    .logo {
+        width: 200px;
+        float: left;
+    }
+}
+
+nav {
+	color: #333;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+
+	li {	
+		padding: 0 25px;
+	}
+
+	.link-follower {
+		border-bottom: 5px solid red !important;
+		bottom: -25px !important;
+	}
+
+	.home {
+
+	}
+	.works {
+
+	}
+	.collections {
+
+	}
+}
+
+.main-container {
+	padding-top: 120px;
+	max-width: 1080px;
+	margin: 0 auto;
 }

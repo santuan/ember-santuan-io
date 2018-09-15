@@ -7,10 +7,10 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     firebase: {
-      apiKey: "AIzaSyC3S-juGTJIf-COtVrN-d3nSSxihVfL_O8",
-      authDomain: "santuan-530a6.firebaseapp.com",
-      databaseURL: "https://santuan-530a6.firebaseio.com",
-      projectId: "santuan-530a6"
+      apiKey: "AIzaSyCM1_mhuP_zLcOp0AV6JUnnCkzAv-gkUtY",
+      authDomain: "santuandg-14679.firebaseapp.com",
+      databaseURL: "https://santuandg-14679.firebaseio.com",
+      projectId: "santuandg-14679"
     },
     EmberENV: {
       FEATURES: {
@@ -26,7 +26,37 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    pace: {
+        color: 'green',
+        theme: 'minimal',
+        catchupTime: 50,
+        initialRate: .01,
+        minTime: 100,
+        ghostTime: 50,
+        maxProgressPerFrame: 20,
+        easeFactor: 1.25,
+        startOnPageLoad: true,
+        restartOnPushState: true,
+        restartOnRequestAfter: 500,
+        target: 'body',
+        elements: {
+          checkInterval: 100,
+          selectors: ['body', '.ember-view']
+        },
+        eventLag: {
+          minSamples: 10,
+          sampleCount: 3,
+          lagThreshold: 3
+        },
+        ajax: {
+          trackMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+          trackWebSockets: true,
+          ignoreURLs: []
+        }
+      }
+      
   };
 
   if (environment === 'development') {

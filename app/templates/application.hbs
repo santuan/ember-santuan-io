@@ -1,13 +1,16 @@
-<h1>Santuan</h1>
-{{#link-to 'index'}} 
-		Inicio
-	{{/link-to}}
-{{#link-to 'colecciones-libres'}} 
-		Colecciones
-	{{/link-to}}
+<header>
+   	{{#link-to 'index' class="logo"}}
+       <img width="250px" src="https://santuan.github.io/web/img/trinomia.svg" alt="logo santuan" class="logo-santuan">
+   	{{/link-to}}
+   {{#links-with-follower class="my-nav main-navigation"}}
+     {{#link-to 'index' tagName='li' class="home"}}Inicio{{/link-to}}
+     {{#link-to 'works' tagName='li' class="works"}}Trabajos{{/link-to}}
+     {{#link-to 'collections' tagName='li' class="collections"}}Colecciones{{/link-to}}
+   {{/links-with-follower}}
+</header>
 
-	{{#link-to 'proyectos'}} 
-		Proyectos
-	{{/link-to}}
 
-{{liquid-outlet}}
+
+
+
+{{liquid-outlet class="main-container"}}

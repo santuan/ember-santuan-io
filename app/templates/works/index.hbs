@@ -1,0 +1,20 @@
+<div class="ui cards">
+  	{{#each model as |works|}}
+  		<div class="card">
+		<div class="image">
+		<img src="{{works.img}}">
+		</div>
+		<div class="content">
+			<div class="header">{{works.title}}</div>
+			<div class="description">
+				{{works.excerpt}}
+			</div>
+		</div>
+		<div class="extra content">
+			{{#link-to 'works.show' works.id}} 
+				Ver proyecto
+		  	{{/link-to}}
+		</div>
+	</div>
+    {{/each}}
+</div>

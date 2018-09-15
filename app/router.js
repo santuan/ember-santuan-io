@@ -7,8 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('colecciones-libres');
-  this.route('proyectos');
+  this.route('works', function() {
+      this.route('show', { path: ":works_id/show" });
+  });
+  this.route('collections');
 });
 
 export default Router;
