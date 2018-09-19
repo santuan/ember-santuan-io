@@ -5,4 +5,7 @@ export default DS.Model.extend({
   excerpt: DS.attr(),
   link: DS.attr(),
   img: DS.attr(),
+  imgFeat: DS.attr(),
+  category: DS.attr(),
+  body: DS.attr(),
 });

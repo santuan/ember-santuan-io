@@ -1,0 +1,15 @@
+.main-container {
+	padding-top: 70px;
+	width: 100%;
+	margin: 0 auto;
+	min-height: 100vh;
+
+	.wrapper {
+		max-width: 1300px;
+		margin: 0 auto;
+		padding: 2em;
+		@include media($ipad) {
+			padding: 1em;
+		}
+	}
+}

@@ -1,16 +1,54 @@
-<header>
-   	{{#link-to 'index' class="logo"}}
-       <img width="250px" src="https://santuan.github.io/web/img/trinomia.svg" alt="logo santuan" class="logo-santuan">
-   	{{/link-to}}
-   {{#links-with-follower class="my-nav main-navigation"}}
-     {{#link-to 'index' tagName='li' class="home"}}Inicio{{/link-to}}
-     {{#link-to 'works' tagName='li' class="works"}}Trabajos{{/link-to}}
-     {{#link-to 'collections' tagName='li' class="collections"}}Colecciones{{/link-to}}
-   {{/links-with-follower}}
-</header>
+{{#burger-menu as |burger|}}
+	{{#burger.menu itemTagName="li"  dismissOnItemClick=true as |menu|}}
+		<a class="close left" {{action burger.state.actions.close}}><i class="fas fa-times"></i></a>
+		<h2>
+			{{body-movin class='stn-logo aside' loop=true autoplay=true
+		    path='https://raw.githubusercontent.com/americasetrama/ember-movimiento/gh-pages/animations/tri-animation.json'
+		    external=true}}
+		</h2>
+		<ul>
+		{{#menu.item}}
+		{{#link-to 'index' class="home"}}Inicio{{/link-to}}
+		{{/menu.item}}
 
+		{{#menu.item}}
+		{{#link-to 'works' class="works"}}Proyectos{{/link-to}}
+		{{/menu.item}}
 
-
-
-
-{{liquid-outlet class="main-container"}}
+		{{#menu.item}}
+		{{#link-to 'collections' class="collections"}}Colecciones{{/link-to}}
+		{{/menu.item}}
+		{{#menu.item}}
+		{{#link-to 'contact' class="contact"}}Contacto{{/link-to}}
+		{{/menu.item}}
+		</ul>
+	{{/burger.menu}}
+	{{#burger.outlet}}
+		<header>
+			<div class="nav-wrapper">
+				<a class="hamburger left" {{action burger.state.actions.toggle}}><i class="fas fa-bars"></i></a>
+				{{#link-to 'index' class="logo"}}
+					<img width="250px" src="https://santuan.github.io/web/img/trinomia.svg" alt="logo santuan" class="logo-santuan">
+				{{/link-to}}
+				{{#links-with-follower class="my-nav main-navigation"}}
+					{{#link-to 'index' tagName='li' class="home"}}Inicio{{/link-to}}
+					{{#link-to 'works' tagName='li' class="works"}}Proyectos{{/link-to}}
+					{{#link-to 'collections' tagName='li' class="collections"}}Colecciones{{/link-to}}
+					{{#link-to 'contact' tagName='li' class="contact"}}Contacto{{/link-to}}
+				{{/links-with-follower}}
+			</div>
+		</header>
+		{{liquid-outlet class="main-container"}}
+		<footer>
+			<p style="padding: 0 15px;">
+			Este sitio es de licencia libre. Esta alojado en Github y el código fuente puede ser descargado desde <a href="https://github.com/santuan/ember-santuan-io">aquí</a>.
+			</p>
+			<p>
+				<b>Ember.js FrontEnd / Google Drive CMS Backend </b>
+			</p>
+			<p>
+				<small><i class="fab fa-github" aria-hidden="true" style="margin-right: 15px;"></i> 2018 santuan</small> 
+			</p>
+		</footer>
+	{{/burger.outlet}}
+{{/burger-menu}}

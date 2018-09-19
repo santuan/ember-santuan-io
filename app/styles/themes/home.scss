@@ -1,0 +1,165 @@
+.stn-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stn-logo {
+	max-width: 350px;
+	margin: 0 auto;
+
+	&.aside {
+		
+	}
+}
+
+.large-header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+    box-shadow: 0 -4px 5px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
+    background: linear-gradient(306deg, #363f4b, #59a8df);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+
+.main-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 0.88s cubic-bezier(0.7, 0, 0.3, 1);
+
+    .stn-logo {
+    	max-width: 299px;
+    	margin: 0 auto 25px;
+    }
+}
+
+.main-title h1 {
+	 color: #f9f1e9;
+	 font-weight: 300;
+	 font-size: 40px;
+	 text-transform: uppercase;
+	 margin: 0;
+	 max-width: 600px;
+	 margin: 0 auto;
+}
+
+.main-title p {
+    margin: 25px auto;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 610px;
+}
+
+
+#bio {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+    padding: 5em 0;
+
+	.bio-item {
+    	display: flex;
+    	margin: 20px 0;
+
+    	@include media($ivertical) {
+			flex-direction: column;
+		}
+
+		figure {
+			width: 450px;
+
+	    	@include media($ivertical) {
+				width: 100%;
+				padding: 0 55px;
+			}
+
+			@include media($mobile) {
+			padding: 0;
+			margin: 0;
+		}
+
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.bio-content {
+			flex: 1;
+			flex-direction: column;
+			text-align: left;
+			margin: 15px;
+
+			@include media($mobile) {
+				text-align: center;
+			}
+		}
+	}
+	
+
+	@include media($ivertical) {
+		.reverse {
+			flex-direction: column-reverse;
+		}
+	}
+
+	.separator {
+		height: 110px;
+	    overflow: hidden;
+
+
+		@include media($mobile) {
+			display: none;
+		}
+	}
+
+	h3 {
+		font-size: 32px;
+		margin: 15px 0 0 25px;
+
+		@include media($mobile) {
+			margin: 15px 0 0 0 ;
+		}
+	}
+
+	p {
+		font-size: 19px;
+	    color: #333;
+	    margin: 7px 0 0 25px;
+
+	    @include media($mobile) {
+	    	margin: 7px 0 0 0 ;
+	    }
+	}
+}

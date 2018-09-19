@@ -11,6 +11,7 @@ Router.map(function() {
       this.route('show', { path: ":works_id/show" });
   });
   this.route('collections');
+  this.route('contact');
 });
 
 export default Router;

@@ -1,73 +1,35 @@
+@import "ember-burger-menu";
 @import "bourbon";
 @import "neat";
 
-.pace .pace-progress {
-  position: fixed;
-  z-index: 8000;
-  bottom: 0px;
-  top: initial;
-  right: 100%;
-  width: 100%;
-  height: 4px;
-}
 
-body  {
-	background: #333;
-	color: #fff;
 
-	a {
-		color: #fff;
-	}
-}
+//@import 'plugins/animate';
 
-header {
-    position: fixed;
-    background: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 70px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/burger-menu';
+@import 'base/footer';
+//@import 'base/pace';
+@import 'base/loading';
 
-    .logo {
-        width: 200px;
-        float: left;
-    }
-}
+@import 'modules/main-nav';
+@import 'modules/main-container';
+@import 'modules/card';
 
-nav {
-	color: #333;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: 700;
+@import 'plugins/animate';
 
-	li {	
-		padding: 0 25px;
-	}
+@import 'themes/home';
+@import 'themes/works';
+@import 'themes/collections';
+@import 'themes/contact';
 
-	.link-follower {
-		border-bottom: 5px solid red !important;
-		bottom: -25px !important;
-	}
 
-	.home {
 
-	}
-	.works {
 
-	}
-	.collections {
 
-	}
-}
 
-.main-container {
-	padding-top: 120px;
-	max-width: 1080px;
-	margin: 0 auto;
-}
+
+
+

@@ -1,20 +1,31 @@
-<div class="ui cards">
-  	{{#each model as |collections|}}
-  		<div class="card">
-		<div class="image">
-		<img src="{{collections.img}}">
-		</div>
-		<div class="content">
-			<div class="header">{{collections.title}}</div>
-			<div class="description">
-				{{collections.excerpt}}
+<div class="collections-hero">
+	<h2>Colecciones de Software Libre</h2>	
+	<p>Un repositorio de aplicaciones, tutoriales, recursos, artículos e inspiración</p>
+</div>
+<div class="collections wrapper">
+	<div class="ui cards">
+	  	{{#each model as |collections|}}
+	  		<div class="card animated fadeIn">
+			<div class="image">
+				<img src="{{collections.img}}">
+			</div>
+			<div class="content">
+				<div class="header">{{collections.title}}</div>
+				<div class="description">
+					{{collections.excerpt}}
+				</div>
+			</div>
+			<div class="extra content">
+				<a href="{{collections.link}}" target="_blank" class="ui animated fluid orange button">
+					<div class="visible content">Visitar sitio</div>
+					<div class="hidden content">
+						<i class="external alternate icon"></i>
+					</div>
+				</a>
+
 			</div>
 		</div>
-		<div class="extra content">
-			<a href="{{collections.link}}" target="_blank" class="ui basic green button">Visitar sitio</a>
-		</div>
+	    {{/each}}
 	</div>
-    {{/each}}
+	{{liquid-outlet}}
 </div>
-
-{{liquid-outlet}}

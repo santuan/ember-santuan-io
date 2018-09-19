@@ -4,8 +4,8 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-santuan-io',
     environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/stn-ember-drivecms/',
+    locationType: 'hash',
     firebase: {
       apiKey: "AIzaSyCM1_mhuP_zLcOp0AV6JUnnCkzAv-gkUtY",
       authDomain: "santuandg-14679.firebaseapp.com",
@@ -26,37 +26,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    pace: {
-        color: 'green',
-        theme: 'minimal',
-        catchupTime: 50,
-        initialRate: .01,
-        minTime: 100,
-        ghostTime: 50,
-        maxProgressPerFrame: 20,
-        easeFactor: 1.25,
-        startOnPageLoad: true,
-        restartOnPushState: true,
-        restartOnRequestAfter: 500,
-        target: 'body',
-        elements: {
-          checkInterval: 100,
-          selectors: ['body', '.ember-view']
-        },
-        eventLag: {
-          minSamples: 10,
-          sampleCount: 3,
-          lagThreshold: 3
-        },
-        ajax: {
-          trackMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
-          trackWebSockets: true,
-          ignoreURLs: []
-        }
-      }
-      
+    }
+     
   };
 
   if (environment === 'development') {

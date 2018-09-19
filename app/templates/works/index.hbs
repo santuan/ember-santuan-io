@@ -1,20 +1,15 @@
-<div class="ui cards">
-  	{{#each model as |works|}}
-  		<div class="card">
-		<div class="image">
-		<img src="{{works.img}}">
-		</div>
-		<div class="content">
-			<div class="header">{{works.title}}</div>
-			<div class="description">
-				{{works.excerpt}}
-			</div>
-		</div>
-		<div class="extra content">
-			{{#link-to 'works.show' works.id}} 
-				Ver proyecto
-		  	{{/link-to}}
-		</div>
-	</div>
-    {{/each}}
+<div class="works-hero">
+	<h2>Proyectos</h2>	
 </div>
+<div class="wrapper">
+	<div class="ui cards works-container">
+	  	{{#each model as |works|}}
+	  		<div class="card animated fadeIn">
+				{{#link-to 'works.show' works.id class="image"}} 
+					<img src="{{works.img}}">
+				{{/link-to}}
+			</div>
+	    {{/each}}
+	</div>
+</div>
+

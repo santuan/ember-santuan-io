@@ -1,12 +1,20 @@
-<div class="works-container">
-	<h1>{{model.title}}</h1>
-	<img src="{{model.img}}" alt="" width="500px">
-	<p>
-		{{model.url}}
-	</p>
-	<p>
-		{{model.excerpt}}
-	</p>
+<div class="works-hero" style="min-height: 500px; ">
+	<h2>{{model.title}}</h2>
+	<p style="margin-bottom: 20px">{{model.category}}</p>
+	<a href="{{model.link}}" target="_blank" class="ui animated large green button">
+		<div class="visible content">Visitar sitio</div>
+		<div class="hidden content">
+			<i class="external alternate icon"></i>
+		</div>
+	</a>
 </div>
-
-{{liquid-outlet}}
+<div class="wrapper">
+	<article class="works-container">
+		<p>{{{model.body}}}</p>
+		<p>
+			{{#link-to 'works' class="ui red fluid large button"}}
+				volver a proyectos
+			{{/link-to}}
+		</p>
+	</article>
+</div>

@@ -1,7 +1,51 @@
-{{body-movin class='logo-santuan' loop=true autoplay=true
-    path='https://raw.githubusercontent.com/americasetrama/ember-movimiento/gh-pages/animations/tri-animation.json'
-    external=true}}
-
-{{body-movin class='santuan-logo-movin' clickAction='reverse' loop=false autoplay=true
-    path='https://raw.githubusercontent.com/americasetrama/ember-movimiento/gh-pages/animations/mov-santuan.json'
-    external=true}}
+<div id="large-header" class="large-header blue">
+    <div class="main-title">
+    	<div class="stn-home">
+	        {{body-movin class='stn-logo' loop=true autoplay=true
+		    path='https://raw.githubusercontent.com/americasetrama/ember-movimiento/gh-pages/animations/tri-animation.json'
+		    external=true}}
+    	</div>
+        <h1 class="cd-headline slide">
+            <span>Un espacio de soluciones</span>
+        </h1>
+        <p>Diseño y desarrollo páginas web personalizadas <br> adaptadas a todos los dispositivos</p>
+        {{#link-to 'works' class="ui button large red"}}ÚLTIMOS PROYECTOS{{/link-to}}
+    </div>
+</div>
+<div class="content" id="bio">
+    <div class="bio-item">
+        <figure>
+            <img src="https://santuan.github.io/web/img/faq-diseno-web.jpg">
+        </figure>
+        <div class="bio-content">
+            <h3>diseños y rediseños</h3>
+            <p>Me interesa conocer los proyectos para brindar la mejor solución utilizando {{#link-to 'collections'}} herramientas de software{{/link-to}}.</p>
+            <p>Trabajo para mejorar la experiencia del usuario, brindando un sitio web optimizado para dispositivos de diferentes tamaños y plataformas.</p>
+        </div>
+    </div>
+    <div class="separator">
+        <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="803.3px" height="169.6px" viewBox="0 0 803.3 169.6" enable-background="new 0 0 803.3 169.6" xml:space="preserve">
+        <defs>
+        </defs>
+        <g id="Page-1_1_" sketch:type="MSPage">
+            
+                <g id="LOHP-Desktop-02182014--3_1_" transform="translate(-332.000000, -2096.000000)" sketch:type="MSArtboardGroup" opacity="0.43">
+                <path id="line1_1_" sketch:type="MSShapeGroup" fill="none" stroke="#5F452A" stroke-width="3" stroke-dasharray="11,23" d="
+                    M333.6,2096.1c-0.9,12.2,4.9,23.5,11.1,33.6c4.5,7.3,7.8,17.9,14.1,23.7c39.7,36.7,111.4,21.7,160.7,21.7
+                    c41.6,0,83.8,1.8,125.3-2.2c36.6-3.6,73.2-8.3,109.7-11.9c101.5-10,152.1-8.6,247,21c57.3,17.9,94,43.8,132.7,82.5"></path>
+            </g>
+        </g>
+        </svg>
+    </div>
+    <div class="bio-item reverse">
+        <div class="bio-content">
+            <h3>desarrollo</h3>
+            <p>Mi trabajo va desde el desarrollo del sitio hasta la correcta implementacion en el Hosting.</p>
+            <p>Desarrollo páginas web autoadministrables, aplicaciones, sitios institucionales y muchas cosas más.</p>
+        </div>
+        <figure>
+            <img src="https://santuan.github.io/web/img/faq-programacion.jpg" style="margin-top: 35px;">
+        </figure>
+    </div>
+</div>

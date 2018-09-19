@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700|Alegreya+Sans:400,700');
+
+$primary-font: 'Alegreya Sans', sans-serif;
+$small-caps: 'Alegreya Sans SC', sans-serif;
+
+a,
+a:active,
+a:focus,
+a:hover {
+    text-decoration: none
+}
+
+* {
+	font-family: $primary-font;
+}
+
+h1, h2, h3, h4, h5, button, a,  {
+      padding: 0px 0px;
+      margin: 0px 0px;
+      font-family: $small-caps;
+
+} 
+
+.button {
+	font-family: $small-caps !important;
+	letter-spacing: 1px;
+}
+
