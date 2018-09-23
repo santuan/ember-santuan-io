@@ -30,6 +30,41 @@
 	}
 }
 
+.works-hero-feat {
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em .5em;
+	background-size: cover;
+    background-position: center;
+
+    .work-logo {
+    	margin-bottom: 25px;
+    	max-height: 200px;
+    	min-height: 130px;
+    }
+	
+	h2 {
+		color: #fff;
+		font-weight: 300;
+		font-size: 40px;
+		line-height: 45px;
+		text-transform: lowercase;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	p {
+		font-size: 25px;
+		color: #fff;
+		text-align: center;
+		font-weight: 300;
+		margin: 0 0 25px 0;
+	}
+}
+
 .works-container {
 	.card {
 		width: 400px !important;
@@ -59,8 +94,31 @@ article {
 	max-width: 600px;
 	margin: 0 auto;
 
+	.meta {
+		margin-bottom: 20px;
+	}
+
+	.excerpt {
+		font-family: $primary-font;
+		text-align: left;
+		margin-bottom: 30px;
+	}
+
+	.embed {
+		margin-bottom: 30px;
+	}
+
+	h1, h2, h3, h4, h5 {
+		margin-bottom: 15px;
+	}
+
 	p {
 		font-size: 20px;
+		margin-bottom: 15px;
+	}
+
+	.back-to-work {
+		margin-top: 60px;
 	}
 
 	img {

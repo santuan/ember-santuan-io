@@ -1,7 +1,7 @@
 .contacto {
-	width: 100%;
+	max-width: 100% !important;
 	margin: 0 auto;
-	background-image: url(https://santuan.github.io/web/img/back-contacto.svg);
+	background-image: url(/img/back-contacto.svg);
 	background-color: #f9f9f9;
 	background-size: 400px;
 
@@ -27,5 +27,63 @@
 		margin: 0 auto;
 		padding: 2em;
 		background: #fff;
+	}
+
+
+}
+
+.social {
+	a {
+		background: #333;
+		color: #fff;
+		width: 40px;
+		height: 40px;
+		margin: 10px;
+		font-size: 20px;
+		text-align: center;
+		display: inline-block;
+		border-radius: 5px;
+		line-height: 42px;
+		transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+
+		&:hover {
+			transform: scale(1.3);
+		}
+	}
+
+	.social-envelope {
+		background: #dd5044;
+
+		&:hover {
+			background: darken(#dd5044, 5%);			
+		}
+	}
+	.social-telegram {
+		background: #5682a3;
+
+		&:hover {
+			background: darken(#5682a3, 5%);			
+		}
+	}
+	.social-instagram {
+		background: #8b40be;
+
+		&:hover {
+			background: darken(#8b40be, 5%);			
+		}
+	}
+	.social-facebook {
+		background: #4267b2;
+
+		&:hover {
+			background: darken(#4267b2, 5%);			
+		}
+	}
+	.social-whatsapp {
+		background: #1ebea5;
+
+		&:hover {
+			background: darken(#1ebea5, 5%);			
+		}
 	}
 }

@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-santuan-io',
     environment,
-    rootURL: '/stn-ember-drivecms/',
+    rootURL: '/',
     locationType: 'hash',
     firebase: {
       apiKey: "AIzaSyCM1_mhuP_zLcOp0AV6JUnnCkzAv-gkUtY",

@@ -1,17 +1,51 @@
-<div class="works-hero" style="min-height: 500px; ">
+{{#if model.imgFeat}}
+<div class="works-hero-feat" style="background-image: url({{model.imgFeat}})">
+	<img class="work-logo" src="{{model.logo}}">
+	<a href="{{model.link}}" target="_blank" class="ui animated large {{model.color}} button">
+		<div class="visible content">Visitar sitio</div>
+		<div class="hidden content">
+			<i class="external alternate icon"></i>
+		</div>
+	</a>
+
+</div>
+{{else}}
+<div class="works-hero" style="min-height: 500px; background: #333;">
 	<h2>{{model.title}}</h2>
-	<p style="margin-bottom: 20px">{{model.category}}</p>
-	<a href="{{model.link}}" target="_blank" class="ui animated large green button">
+	<a href="{{model.link}}" target="_blank" class="ui animated large {{model.color}} button">
 		<div class="visible content">Visitar sitio</div>
 		<div class="hidden content">
 			<i class="external alternate icon"></i>
 		</div>
 	</a>
 </div>
-<div class="wrapper">
+{{/if}}
+
+
+<div class="wrapper" style="color:">
+	
 	<article class="works-container">
-		<p>{{{model.body}}}</p>
-		<p>
+		
+		{{#if model.category}}
+		<div class="meta">
+			<div class="ui {{model.color}} icon message">
+			  <i class="cogs icon"></i>
+			  <div class="content">
+			    <div class="header">
+			      Tecnologías implementadas
+			    </div>
+			    <h3>{{model.category}}</h3>
+			  </div>
+			</div>
+		</div>
+		{{/if}}
+		<h2 class="excerpt">
+			{{model.excerpt}}
+		</h2>
+		{{{model.body}}}
+
+		{{model.gallery}}
+		<p class="back-to-work">
 			{{#link-to 'works' class="ui red fluid large button"}}
 				volver a proyectos
 			{{/link-to}}
